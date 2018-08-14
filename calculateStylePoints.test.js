@@ -55,4 +55,15 @@ describe('calculateStylePoints', () => {
             assert.equal(actual, expected);
         });
     });
+
+    describe('notes are string', () => {
+        it('should return sum of three notes', () => {
+            const actual = calculateStylePoints("17, 17, 17, 17, 17");
+
+            const expected = 51;
+
+            assert.equal(actual, expected);
+        });
+
+    });
 });

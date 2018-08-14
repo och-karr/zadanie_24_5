@@ -55,4 +55,31 @@ describe('calculateDistancePoints', () => {
             assert.equal(actual, expected);
         });
     });
+
+    describe('the data is wrong', () => {
+        it('the data is in the wrong order', () => {
+            const actual = calculateDistancePoints("Normalna", 55, 70);
+    
+            const expected = 'Bad data, please write first argument - distance, second - Mamucia, Duza or Normalna and kPoint as a third';
+    
+            assert.equal(actual, expected);
+        });
+
+        it('there are not enough arguments', () => {
+            const actual = calculateDistancePoints(55, 70);
+    
+            const expected = 'Bad data, please write first argument - distance, second - Mamucia, Duza or Normalna and kPoint as a third';
+    
+            assert.equal(actual, expected);
+        });
+
+        it('there are no arguments', () => {
+            const actual = calculateDistancePoints();
+    
+            const expected = 'Bad data, please write first argument - distance, second - Mamucia, Duza or Normalna and kPoint as a third';
+    
+            assert.equal(actual, expected);
+        });
+
+    });
 });

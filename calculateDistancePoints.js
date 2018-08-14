@@ -26,7 +26,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
             }
             break;
         default: //czy musi być default w switch statement?
-            console.log('Bad data');
+             var distancePoints = 'Bad data, please write first argument - distance, second - Mamucia, Duza or Normalna and kPoint as a third';
     }
     return distancePoints;
 };
